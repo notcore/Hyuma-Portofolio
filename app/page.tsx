@@ -105,9 +105,9 @@ export default function Home() {
   const autoCapture = async () => {
     setIsCapturing(true);
     
-    await new Promise(r => setTimeout(r, 1000));
+    await new Promise(r => setTimeout(r, 500));
     
-    for (let i = 0; i < 2; i++) { 
+    for (let i = 0; i < 5; i++) { 
       await new Promise(r => setTimeout(r, 2000));
       await takePhoto();
     }
