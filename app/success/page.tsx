@@ -26,7 +26,7 @@ export default function Suksess() {
             <div className="grid-cols-1 place-items-center mb-12 text-center">
                 <h1 className="text-4xl font-bold text-black">Berhasil!</h1>
                 <p className="text-lg text-black">
-                Mohon untuk menunggu verifikasi dari owner untuk mengkonsfirmasi pembayaaran otomatis,<br></br> <span className="font-mono text-slate-400">bukti pembayaran akan dikirim melalui whatsapp owner secara otomatis</span>.
+                Mohon untuk menunggu verifikasi dari owner untuk mengkonsfirmasi pembayaaran otomatis,<br></br> <span className="font-mono text-slate-400 mt-6">bukti pembayaran akan dikirim melalui whatsapp owner secara otomatis</span>.
                 </p>
             </div>
         
