@@ -9,7 +9,7 @@ Personal portfolio built with **Next.js**, **TailwindCSS**, and modern UI animat
 
 ## ✨ **Overview**
 This project is my personal portfolio website.  
-Tujuannya buat nampilin **skill**, **project**, dan **pengalaman** dengan tampilan yang clean, modern, dan fokus pada animasi halus (micro-interactions).
+dibuat untuk menyampaikan infomasi bidang keahlian dan pengalaman.
 
 Saat ini project masih dalam tahap pengembangan.  
 Progress akan terus di-update di repository ini.
