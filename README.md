@@ -1,5 +1,6 @@
 <div align="center">
-
+![gambar](https://raw.githubusercontent.com/notcore/Hyuma-Portofolio/main/public/Tak%20berjudul387_20251119174113.jpg)
+  
 # 🌐 **Portfolio Website — Work in Progress**
 Personal portfolio built with **Next.js**, **TailwindCSS**, and modern UI animations.
 
