@@ -17,6 +17,17 @@
 
 @layer utilities {
 
+.pixel-border::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  border: 4px solid black;
+  border-radius: inherit;
+  box-sizing: border-box;
+  image-rendering: pixelated;
+}
+
+
   @keyframes spin-slow-one {
     100% { transform: rotate(360deg); }
   }

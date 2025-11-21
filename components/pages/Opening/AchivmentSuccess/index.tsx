@@ -24,7 +24,7 @@ const AchivmentSuccess = () => {
                     animate={{ y: 20, opacity: 1 }}
                     exit={{ y: -120, opacity: 1 }}
                     transition={{ duration: 0.6 }}
-                    className="bg-white z-40 shadow-sm border sm:border-3 p-1 sm:p-2 border-slate-300 absolute left-1/2 -translate-x-1/2 top-0 rounded-md"
+                    className="bg-white z-40 shadow-sm border-1 sm:border-3 p-1 sm:p-2 border-slate-300 absolute left-1/2 -translate-x-1/2 top-0 rounded-md"
                 >
                     <div className="flex relative">
                         <img
