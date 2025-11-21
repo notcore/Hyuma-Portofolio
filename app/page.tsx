@@ -5,14 +5,25 @@ import PortofolioText from "@/components/pages/Opening/PortofolioText";
 import TagPortofolio from "@/components/pages/Opening/TagPortofolio";
 import TextSmall from "@/components/pages/Opening/SmallText";
 import AchivmentLoading from "@/components/pages/Opening/AchivmentLoading/index";
+import AchivmentSuccess from "@/components/pages/Opening/AchivmentSuccess";
+import Ticket from "@/components/pages/Opening/Ticket";
+import Aura from "@/components/pages/Opening/Aura";
 import BlurOverlay from "@/components/ui/BlurOverlay";
 
 export default function Home() {
 
   const UrlPortofolioText = "/assets/svg/text/portofolioText.svg";
 
+  useEffect(() => {
+  document.body.classList.add("overflow-hidden");
+  return () => {
+    document.body.classList.remove("overflow-hidden"); // dihapus pas komponen unmount / pindah halaman
+  };
+}, []);
+
+
   return (
-    <div className="bg-white min-h-screen w-screen flex flex-col items-center justify-center">
+    <div className="bg-white overflow-hidden h-screen w-screen flex flex-col items-center justify-center">
 
       <div className="grid grid-cols-1 max-w-[60%] relative">
         <img 
@@ -35,6 +46,9 @@ export default function Home() {
       </div>
       <BlurOverlay />
       <AchivmentLoading />
+      <AchivmentSuccess />
+      <Aura />
+      <Ticket />
     </div>
   );
 }
