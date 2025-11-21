@@ -24,7 +24,7 @@ const Aura = () => {
                         <img
                             src="/assets/svg/shape/aura.svg"
                             alt="Aura"
-                            className="w-screen"
+                            className="xl:w-screen w-[900px] h-[800px]"
                         />
                     </div>
                 </motion.div>
