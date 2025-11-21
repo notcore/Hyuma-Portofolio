@@ -35,7 +35,7 @@ const AchivmentSuccess = () => {
                             <p className="sm:text-2xl text-md font-bold -mb-2 font-minecraft text-blue-600">
                                 Success!
                             </p>
-                            <p className="sm:text-xl text-[15px] font-minecraft">amnbil tiketnya</p>
+                            <p className="sm:text-xl text-[15px] font-minecraft">silahkan!</p>
                         </div>
                     </div>
                 </motion.div>
