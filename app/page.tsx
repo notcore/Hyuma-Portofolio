@@ -23,9 +23,9 @@ export default function Home() {
 
 
   return (
-    <div className="bg-white overflow-hidden h-screen w-screen flex flex-col items-center justify-center">
+    <div className="bg-white  overflow-hidden h-screen w-screen flex flex-col items-center justify-center">
 
-      <div className="grid grid-cols-1 max-w-[60%] relative">
+      <div className="grid -mt-25 sm:-mt-1 grid-cols-1 max-w-[60%] relative">
         <img 
           src="/assets/svg/shape/portofolio-star.svg"
           className="absolute animate-spin-slow-one z-10 -right-5 w-[50px] md:w-auto"

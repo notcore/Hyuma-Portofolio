@@ -18,7 +18,7 @@ const Aura = () => {
                     initial={{ y: 700, opacity: 0 }}
                     animate={{ y: 150, opacity: 1 }}
                     transition={{ duration: 2 }}
-                    className="z-40 absolute left-1/2 -translate-x-1/2 top-0"
+                    className="z-40 hidden sm:absolute left-1/2 -translate-x-1/2 top-0"
                 >
                     <div className="flex relative min-w-screen">
                         <img
