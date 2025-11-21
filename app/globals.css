@@ -30,7 +30,7 @@
   }
 
   .animate-spin-slow-two {
-    animation: spin-slow-two 8s linear infinite;
+    animation: spin-slow-two 15s linear infinite;
   }
 
 }
