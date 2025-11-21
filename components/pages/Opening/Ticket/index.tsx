@@ -24,7 +24,7 @@ const Ticket = () => {
 
   const ticketVariants = {
     initial: { y: isMobile ? 1020 : 500, opacity: 1 },
-    animate: { y: isMobile ? 90 : 150, opacity: 1 },
+    animate: { y: isMobile ? 190 : 150, opacity: 1 },
   };
 
   return (
