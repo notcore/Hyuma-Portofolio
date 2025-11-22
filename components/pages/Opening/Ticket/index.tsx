@@ -19,7 +19,7 @@ const Ticket = () => {
   }, []);
 
   const handleClick = () => {
-    window.location.href = "/user";
+    window.location.href = "/core";
   };
 
   const ticketVariants = {
@@ -41,7 +41,7 @@ const Ticket = () => {
             <img
               src="/assets/img/ticket/ticket.png"
               alt="Ticket"
-              className="sm:max-w-[250px]"
+              className="sm:max-w-[250px] animate-fly"
             />
           </div>
         </motion.div>

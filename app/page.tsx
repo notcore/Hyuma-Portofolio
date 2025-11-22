@@ -10,6 +10,8 @@ import Ticket from "@/components/pages/Opening/Ticket";
 import Aura from "@/components/pages/Opening/Aura";
 import BlurOverlay from "@/components/ui/BlurOverlay";
 
+// refrensi https://www.behance.net/gallery/238528403/Digital-portfolio-Yulia-Li?tracking_source=search_projects|portfolio+website&l=4
+
 export default function Home() {
 
   const UrlPortofolioText = "/assets/svg/text/portofolioText.svg";
@@ -17,13 +19,13 @@ export default function Home() {
   useEffect(() => {
   document.body.classList.add("overflow-hidden");
   return () => {
-    document.body.classList.remove("overflow-hidden"); // dihapus pas komponen unmount / pindah halaman
+    document.body.classList.remove("overflow-hidden");
   };
 }, []);
 
 
   return (
-    <div className="bg-white  overflow-hidden h-screen w-screen flex flex-col items-center justify-center">
+    <div className="bg-white  overflow-hidden h-screen w-screen flex flex-col font-poppins items-center justify-center">
 
       <div className="grid -mt-25 sm:-mt-1 grid-cols-1 max-w-[60%] relative">
         <img 
