@@ -18,8 +18,7 @@ export default function CorePage(){
                     <TagTitle title="About me" color="blue" />
                     <SubTitle />
                     <div className="flex flex-wrap mt-4 gap-2">
-                        <Label title="Web Developer" color="blue-600" colorText="white"/>
-                        <Label title="Networking" color="green-600" colorText="white"/>
+                                <p className={`bg-blue-600 text-white px-3 py-1 text-xl rounded-full`}>Web Developer</p>         <p className={`bg-green-500 text-white px-3 py-1 text-xl rounded-full`}>Networking</p>
                     </div>
                     <img
                         src="/assets/svg/shape/pixel-wavy.svg"
