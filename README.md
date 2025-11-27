@@ -25,9 +25,10 @@ Fitur yang sudah berjalan:
 - [x] UI/UX figma
 - [x] Font Setup
 - [X] Menu awal
+- [x] loading menu
 - [ ] Navigasi Fiture
 - [ ] ScrollTrigger
-- [ ] About page
+- [x] About page
 - [ ] Web Developer page
 - [ ] Networking page
 - [ ] Contact me page
