@@ -8,7 +8,7 @@ const PortofolioText = ( { Url }: Props ) => {
         <img
             src={Url}
             alt="Portofolio"
-            className="w-full h-auto -mt-12"
+            className="w-full h-auto scale-y-120 select-none pointer-events-none"
         />
     </>
     )

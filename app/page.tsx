@@ -10,11 +10,14 @@ import Ticket from "@/components/pages/Opening/Ticket";
 import Aura from "@/components/pages/Opening/Aura";
 import BlurOverlay from "@/components/ui/BlurOverlay";
 
+import Image from "next/image";
+
 // refrensi https://www.behance.net/gallery/238528403/Digital-portfolio-Yulia-Li?tracking_source=search_projects|portfolio+website&l=4
 
 export default function Home() {
 
-  const UrlPortofolioText = "/assets/svg/text/portofolioText.svg";
+  const Background = "/assets/img/cloud/background.jpg";
+  const UrlPortofolioText = "/assets/img/text/intro.png";
 
   useEffect(() => {
   document.body.classList.add("overflow-hidden");
@@ -25,26 +28,23 @@ export default function Home() {
 
 
   return (
-    <div className="bg-white  overflow-hidden h-screen w-screen flex flex-col font-poppins items-center justify-center">
+    <div className="bg-white overflow-hidden h-screen w-screen flex flex-col font-poppins items-center justify-center">
+      
+      <div className="max-w-scren">
+        <Image 
+          src={Background} 
+          fill 
+          alt="background" 
+          className="w-screen brightness-120 " 
+        />
+      </div>
 
       <div className="grid -mt-25 sm:-mt-1 grid-cols-1 max-w-[60%] relative">
-        <img 
-          src="/assets/svg/shape/portofolio-star.svg"
-          className="absolute animate-spin-slow-one z-10 -right-5 w-[50px] md:w-auto"
-        />
-        <div className="absolute z-20 backdrop-brightness-150 -right-5 backdrop-blur-[3px] md:backdrop-blur-[6px] bg-white-[30%] w-[50px] md:w-[90px] md:h-[40px] shadow-sm h-[20px] rounded-full border-[0.5] border-white mt-6 md:mt-9">
-          <div className="w-[18px] h-[18px] m-[2px] md:m-1 md:w-[38px] md:h-[38px] rounded-full bg-[#019ED8] border-[0.8] border-white">
-            
-          </div>
-        </div>
+        
         <TagPortofolio  />
         <PortofolioText Url={UrlPortofolioText}/>
         <TextSmall />
-       
-        <img 
-          src="/assets/svg/shape/portofolio-star.svg"
-          className="absolute animate-spin-slow-two z-30 bottom-2 -left-5 w-[50px] md:w-auto"
-        />
+  
       </div>
       <BlurOverlay />
       <AchivmentLoading />

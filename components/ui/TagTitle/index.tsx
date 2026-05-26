@@ -1,13 +1,16 @@
+import { ChevronRight } from "lucide-react";
+
 type props = {
     title: string;
     color: string;
+    bagian: string;
 }
 
-const TagTitle = ( {title, color} : props ) => {
+const TagTitle = ( {title, color, bagian} : props ) => {
     return(
         <div className="flex justify-start my-5 items-center">
-            <div className={`text-${color}-600 font-coolvetica text-5xl font-semibold`}>#</div>
-            <h1 className={`text-3xl ml-1 font-bold`}>{title}</h1>
+            <div><ChevronRight className={`text-${color}-600 font-coolvetica text-sm font-semibold`}/></div>
+            <h1 className={`text-sm ml-1 uppercase`}>{title} / <span className={`text-${color}-600`}>{bagian}</span></h1>
         </div>
     )
 }

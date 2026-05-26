@@ -3,6 +3,7 @@
 
 @custom-variant dark (&:is(.dark *));
 
+
 @font-face {
   font-family: "Minecraft";
   src: url("/fonts/Minecraft.otf") format("opentype");
