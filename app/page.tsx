@@ -35,7 +35,7 @@ export default function Home() {
           src={Background} 
           fill 
           alt="background" 
-          className="w-screen brightness-120 " 
+          className="max-w-screen object-cover brightness-120 " 
         />
       </div>
 

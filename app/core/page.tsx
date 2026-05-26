@@ -18,7 +18,6 @@ export default function CorePage(){
 
             <div className="w-[90%] min-h-screen mx-5 xl:mx-40 md:mx-10 relative h-screen grid grid-cols-1 md:grid-cols-2 place-content-center place-items-center">
                 <div className="relative mt-20 md:mt-0 mx-4">
-                    <Image className="absolute opacity-0" src={Cloud1} alt=""/>
                     <TagTitle title="Home" bagian="about me" color="blue" />
                     <SubTitle />
                     <div className="flex flex-wrap mt-4 gap-2">

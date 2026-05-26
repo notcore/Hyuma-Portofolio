@@ -12,7 +12,7 @@ const SubTitle = () => {
 
         <div className="text-blue-600">
           <TextAnimate animation="blurIn" by="word">
-            jurusan Teknik Jaringan Komputer
+            SMK jurusan Teknik Jaringan Komputer
           </TextAnimate>
         </div>
 
