@@ -40,6 +40,10 @@
 
 @layer utilities {
 
+  .custom-cursor {
+    cursor: url("/cursor-brush.png") 16 16, crosshair;
+  }
+
 .pixel-border::before {
   content: "";
   position: absolute;
