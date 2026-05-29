@@ -2,7 +2,7 @@
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
-
+@custom-variant slg (@media (width >= 1152px));
 
 @font-face {
   font-family: "Minecraft";
@@ -37,6 +37,7 @@
 .font-coolvetica {
   font-family: "Coolvetica";
 }
+
 
 @layer utilities {
 

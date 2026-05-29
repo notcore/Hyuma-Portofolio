@@ -17,12 +17,12 @@ const Label = ({
     <div className="relative group inline-block">
       
       <button
-        className="peer bg-blue-500 text-white rounded-sm px-3 py-1 font-minecraft text-xl border border-blue-300"
+        className="peer bg-blue-500 text-white rounded-sm px-3 py-1 border border-blue-300"
       >
         {title}
       </button>
 
-      <div className="absolute grid group-hover:opacity-100 opacity-0 peer-hover:opacity-100 peer-active:opacity-100 peer-focus:opacity-100 transition duration-300 w-40 bg-white/20 backdrop-blur-[6px] p-3 -mt-26 rounded-md -ml-5 border">
+      <div className="absolute pointer-events-none select-none grid group-hover:opacity-100 opacity-0 peer-hover:opacity-100 peer-active:opacity-100 peer-focus:opacity-100 transition duration-300 w-40 bg-white/20 backdrop-blur-[6px] p-3 -mt-26 rounded-md -ml-5 border">
         
         <div className="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-blue-600"></div>
         <div className="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-blue-600"></div>

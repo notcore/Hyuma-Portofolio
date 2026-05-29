@@ -1,56 +1,62 @@
 "use client";
 
-import { useRef, ChangeEvent, useState, useEffect } from "react";
-import PortofolioText from "@/components/pages/Opening/PortofolioText"; 
-import TagPortofolio from "@/components/pages/Opening/TagPortofolio";
-import TextSmall from "@/components/pages/Opening/SmallText";
-import AchivmentLoading from "@/components/pages/Opening/AchivmentLoading/index";
-import AchivmentSuccess from "@/components/pages/Opening/AchivmentSuccess";
-import Ticket from "@/components/pages/Opening/Ticket";
-import Aura from "@/components/pages/Opening/Aura";
+import { useState } from "react";
+import AchivmentWelcome from "@/components/pages/Core/Achivment/AchivmentLoading";
+import AchivmentPhoto from "@/components/pages/Core/Achivment/AchivmentPhoto";
 import BlurOverlay from "@/components/ui/BlurOverlay";
+import TagTitle from "@/components/ui/TagTitle";
+import AboutMe from "@/components/pages/Core/Section/Introduce";
+import Label from "@/components/ui/Label";
+import Photo from "@/components/pages/Core/Section/Photo";
+import Experience from "@/components/pages/Core/Section/Experience";
+import Projects from "@/components/pages/Core/Section/Projects";
+import Layout from "@/components/ui/Layout";
+import Contact from "@/components/pages/Core/Section/Contact";
 
-import Image from "next/image";
-
-// refrensi https://www.behance.net/gallery/238528403/Digital-portfolio-Yulia-Li?tracking_source=search_projects|portfolio+website&l=4
-
-export default function Home() {
-
-  const Background = "/assets/img/cloud/background.jpg";
-  const UrlPortofolioText = "/assets/img/text/intro.png";
-
-  useEffect(() => {
-  document.body.classList.add("overflow-hidden");
-  return () => {
-    document.body.classList.remove("overflow-hidden");
-  };
-}, []);
-
+export default function CorePage() {
+  const [photoRevealed, setPhotoRevealed] = useState(false);
 
   return (
-    <div className="bg-white overflow-hidden h-screen w-screen flex flex-col font-poppins items-center justify-center">
-      
-      <div className="max-w-scren">
-        <Image 
-          src={Background} 
-          fill 
-          alt="background" 
-          className="max-w-screen object-cover brightness-120 " 
-        />
+    <Layout>
+      <div className="flex flex-col gap-24 px-6 md:px-12 xl:px-20 py-16">
+
+        {/* About */}
+        <section
+          id="about"
+          className=" grid md:flex"
+        >
+          <div className="flex-1 max-w-[400px]">
+            <TagTitle title="Home" bagian="about me" color="blue" />
+            <AboutMe />
+            <div className="flex flex-wrap mt-4  gap-2">
+              <Label detailSkill="web developer" detailDeskripsi="PHP, Javascript" title="Developer" color="blue-600" colorText="white" />
+              <Label detailSkill="Basic Network" detailDeskripsi="Cisco, Mikrotik" title="Networking" color="green-600" colorText="white" />
+              <Label detailSkill="admin data" detailDeskripsi="Excel, word" title="Office" color="green-600" colorText="white" />
+            </div>
+            
+          </div>
+
+         <Photo className="w-[240px]  h-[300px] relative" onRevealed={() => setPhotoRevealed(true)} />
+        </section>
+
+        {/* Experience */}
+        <section id="experience" className="min-h-screen">
+          <Experience />
+        </section>
+
+        {/* Projects */}
+        <section id="projects" className="min-h-screen">
+          <Projects />
+        </section>
+
+        {/* Contact */}
+        <section id="contact" className="min-h-[40vh]">
+          <Contact />
+        </section>
+
       </div>
 
-      <div className="grid -mt-25 sm:-mt-1 grid-cols-1 max-w-[60%] relative">
-        
-        <TagPortofolio  />
-        <PortofolioText Url={UrlPortofolioText}/>
-        <TextSmall />
-  
-      </div>
       <BlurOverlay />
-      <AchivmentLoading />
-      <AchivmentSuccess />
-      <Aura />
-      <Ticket />
-    </div>
+    </Layout>
   );
 }

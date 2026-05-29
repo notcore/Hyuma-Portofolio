@@ -6,7 +6,7 @@ type props = {
 const Title = ( { children,className } : props ) => {
 
     return(
-        <h2 className={`text-4xl md:text-6xl ${className} font-bold`}>{children}</h2>
+        <h2 className={`text-3xl lg:text-4xl font-coolvetica`}>{children}</h2>
     )
 }
 
