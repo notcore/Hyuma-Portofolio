@@ -38,7 +38,7 @@ export default function Sidebar({ active }: { active: string }) {
       <div className="px-[22px] pt-[26px] pb-[18px]">
         <div className="w-14 h-14 rounded-full bg-[#f0f0ee] border border-black/[0.09] overflow-hidden mb-[13px]">
           <img
-            src="/assets/img/profile/profile.jfif"
+            src="/assets/img/profile/profile.webp"
             alt="Dava Elyanta"
             className="w-full h-full object-cover"
           />

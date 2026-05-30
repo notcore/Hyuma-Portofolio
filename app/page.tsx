@@ -1,17 +1,15 @@
 "use client";
 
 import { useState } from "react";
-import AchivmentWelcome from "@/components/pages/Core/Achivment/AchivmentLoading";
-import AchivmentPhoto from "@/components/pages/Core/Achivment/AchivmentPhoto";
 import BlurOverlay from "@/components/ui/BlurOverlay";
 import TagTitle from "@/components/ui/TagTitle";
-import AboutMe from "@/components/pages/Core/Section/Introduce";
+import AboutMe from "@/components/Home/Home/Section/Introduce";
 import Label from "@/components/ui/Label";
-import Profile from "@/components/pages/Core/Section/Profile";
-import Experience from "@/components/pages/Core/Section/Experience";
-import Projects from "@/components/pages/Core/Section/Projects";
+import Profile from "@/components/Home/Home/Section/Profile";
+import Experience from "@/components/Home/Home/Section/Experience";
+import Projects from "@/components/Home/Home/Section/Projects";
 import Layout from "@/components/ui/Layout";
-import Contact from "@/components/pages/Core/Section/Contact";
+import Contact from "@/components/Home/Home/Section/Contact";
 
 export default function CorePage() {
   const [photoRevealed, setPhotoRevealed] = useState(false);

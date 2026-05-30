@@ -91,7 +91,7 @@ export default function MobileNav({ active }: { active: string }) {
             <div className="flex items-center gap-3 px-4 py-3.5 border-b border-black/[0.07]">
               <div className="w-8 h-8 rounded-full bg-[#f0f0ee] border border-black/[0.09] overflow-hidden flex-shrink-0">
                 <img
-                  src="/assets/img/profile/profile.jfif"
+                  src="/assets/img/profile/profile.webp"
                   alt="Dava"
                   className="w-full h-full object-cover"
                 />

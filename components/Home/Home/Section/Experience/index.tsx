@@ -22,7 +22,7 @@ const experiences: ExperienceItem[] = [
   {
     id: 1,
     title: "Freelance web developer",
-    year: "2025 - sekarang",
+    year: "2025",
     points: [
         "Mengembangkan dan membangun website sesuai kebutuhan klien",
     "Menerjemahkan desain UI/UX menjadi tampilan website yang responsif",

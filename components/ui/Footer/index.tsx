@@ -38,7 +38,7 @@ export default function Footer() {
         <div className="sm:col-span-2 lg:col-span-1 flex flex-col gap-3">
           <div className="relative w-10 h-10 rounded-full bg-[#f0f0ee] border border-black/[0.09] overflow-hidden">
             <img
-              src="/assets/img/profile/profile.jfif"
+              src="/assets/img/profile/profile.webp"
               alt="Dava Elyanta"
               className="w-full h-full object-cover"
             />
