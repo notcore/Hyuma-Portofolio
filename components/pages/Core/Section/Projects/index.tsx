@@ -35,7 +35,7 @@ const projects: ProjectItem[] = [
   },
   {
     id: 2,
-    title: "Inker",
+    title: "Inker: Busines website",
     year: "2026",
     description:
       "Membuat website management client dan SOP produk",

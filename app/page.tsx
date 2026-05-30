@@ -7,7 +7,7 @@ import BlurOverlay from "@/components/ui/BlurOverlay";
 import TagTitle from "@/components/ui/TagTitle";
 import AboutMe from "@/components/pages/Core/Section/Introduce";
 import Label from "@/components/ui/Label";
-import Photo from "@/components/pages/Core/Section/Photo";
+import Profile from "@/components/pages/Core/Section/Profile";
 import Experience from "@/components/pages/Core/Section/Experience";
 import Projects from "@/components/pages/Core/Section/Projects";
 import Layout from "@/components/ui/Layout";
@@ -36,8 +36,8 @@ export default function CorePage() {
             
           </div>
 
-         <Photo className="w-[240px]  h-[300px] relative" onRevealed={() => setPhotoRevealed(true)} />
         </section>
+        <Profile className="-mx-6 md:-mx-12 xl:-mx-20"/>
 
         {/* Experience */}
         <section id="experience" className="min-h-screen">

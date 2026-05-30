@@ -4,7 +4,7 @@ const socials = [
   { icon: Github,    href: "https://github.com/notcore",         label: "GitHub",    value: "notcore" },
 //   { icon: Instagram, href: "https://instagram.com/mistakee._", label: "Instagram", value: "@dava.elyanta" },
   { icon: Phone,      href: "https://wa.me/6281215997620",           label: "whatsapp",  value: "6281215997620" },
-  { icon: Mail,      href: "mailto:dava@email.com",              label: "Email",     value: "dava@email.com" },
+  { icon: Mail,      href: "mailto:davaelyanta@email.com",              label: "Email",     value: "davaelyanta@email.com" },
 ];
 
 const quickNav = [
@@ -16,7 +16,6 @@ const quickNav = [
 
 const skills = ["Next.js", "React", "Laravel", "Tailwind CSS", "Cisco", "Mikrotik"];
 
-// ── Corner bracket decorator (sama kayak Label) ──────────────────────────────
 const Corners = ({ className = "" }: { className?: string }) => (
   <>
     <div className={`absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 ${className}`} />
@@ -34,10 +33,8 @@ export default function Footer() {
   return (
     <footer className="relative border-t border-black/[0.07] mt-10 px-6 md:px-10 pt-10 pb-6">
 
-      {/* ── Grid utama ──────────────────────────────────────────────────── */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
 
-        {/* Kolom 1 — Identitas */}
         <div className="sm:col-span-2 lg:col-span-1 flex flex-col gap-3">
           <div className="relative w-10 h-10 rounded-full bg-[#f0f0ee] border border-black/[0.09] overflow-hidden">
             <img
@@ -55,7 +52,7 @@ export default function Footer() {
             Yogyakarta, Indonesia
           </div>
           <p className="text-xs text-neutral-400 leading-relaxed mt-1">
-            Lulusan SMK Teknik Komputer Jaringan, tertarik di bidang web development dan networking.
+            Lulusan SMK Teknik Komputer Jaringan.
           </p>
         </div>
 

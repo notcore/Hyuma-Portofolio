@@ -1,7 +1,7 @@
 import TagTitle from "@/components/ui/TagTitle";
 import { TextAnimate } from "@/components/ui/text-animate";
 import Title from "@/components/ui/Title";
-import { Mail, Github, Globe, MessageSquare } from "lucide-react"; 
+import { Mail, Phone, Github, Globe, MessageSquare } from "lucide-react"; 
 
 const Contact = () => {
   const contacts = [
@@ -15,7 +15,7 @@ const Contact = () => {
       name: "WhatsApp",
       value: "hubungi melalui whatsapp",
       href: "https://wa.me/6281215997620",
-      icon: <MessageSquare className="w-5 h-5 text-blue-600" />,
+      icon: <Phone className="w-5 h-5 text-blue-600" />,
     },
   ];
 
