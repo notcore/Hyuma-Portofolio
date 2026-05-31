@@ -5,42 +5,52 @@ type props = {
 const Profile = ({ className }: props) => {
   return (
     <div
-      className={`relative overflow-hidden lg:overflow-visible mt-10 lg:-left-14 lg:mt-0 flex justify-center items-end ${className}`}
+      className={`relative mt-10 md:-left-14 md:mt-0 flex justify-center items-end ${className}`}
     >
-      {/* foto orang */}
-      <img
-        draggable={false}
-        onDragStart={(e) => e.preventDefault()}
-        className="relative w-[400px] lg:w-[240px] select-none pointer-events-none z-20"
-        src="/assets/img/profile/person.webp"
-      />
+      <div
+        className="relative w-full flex justify-center items-end overflow-hidden
+                      h-[420px] md:h-auto md:overflow-visible"
+      >
+        <img
+          draggable={false}
+          onDragStart={(e) => e.preventDefault()}
+          className="absolute z-10 top-0 w-full select-none pointer-events-none sm:hidden"
+          src="assets/img/gradient/gradient-profile2.webp"
+        />
 
-      {/* gradient mobile (sm ke bawah) */}
-      <img
-        draggable={false}
-        onDragStart={(e) => e.preventDefault()}
-        className="absolute z-10 top-0 select-none pointer-events-none sm:hidden"
-        src="assets/img/gradient/gradient-profile2.webp"
-      />
+        <img
+          draggable={false}
+          onDragStart={(e) => e.preventDefault()}
+          className="absolute z-10 top-10 sm:top-5 w-full select-none pointer-events-none object-cover hidden sm:block md:hidden"
+          src="assets/img/gradient/gradient-profile-large.webp"
+        />
 
-      {/* gradient tablet (sm ke atas, tapi bukan desktop) */}
-      <img
-        draggable={false}
-        onDragStart={(e) => e.preventDefault()}
-        className="absolute z-10 top-30 md:top-5 select-none pointer-events-none object-cover hidden sm:block lg:hidden"
-        src="assets/img/gradient/gradient-profile-large.webp"
-      />
+        <img
+          draggable={false}
+          onDragStart={(e) => e.preventDefault()}
+          className="absolute md:scale-145 z-10 -top-3 select-none pointer-events-none object-cover hidden md:block"
+          src="assets/img/gradient/grid-gradient.webp"
+        />
 
-      {/* gradient grid desktop */}
-      <img
-        draggable={false}
-        onDragStart={(e) => e.preventDefault()}
-        className="absolute scale-150 z-10 top-20 md:-top-5 select-none pointer-events-none object-cover lg:block hidden"
-        src="assets/img/gradient/grid-gradient.webp"
-      />
+        <img
+          draggable={false}
+          onDragStart={(e) => e.preventDefault()}
+          className="relative w-[400px] md:w-[250px] lg:w-[270px] select-none pointer-events-none z-20"
+          src="/assets/img/profile/person.webp"
+        />
 
-      {/* fade bawah: mobile/tablet pakai fade putih full width, desktop tidak */}
-      <div className="bg-gradient-to-t from-white to-transparent sm:h-60 h-50 lg:h-20 lg:w-80 absolute w-screen z-30 -bottom-1" />
+        <div
+          className="absolute bottom-0 left-0 w-full z-30 h-32 sm:h-48
+                        bg-gradient-to-t from-white via-white/80 to-transparent
+                        md:hidden"
+        />
+      </div>
+
+      <div
+        className="absolute bottom-0 w-80 h-20 z-30
+                      bg-gradient-to-t from-white to-transparent
+                      hidden md:block"
+      />
     </div>
   );
 };
