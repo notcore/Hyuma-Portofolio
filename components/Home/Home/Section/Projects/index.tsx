@@ -6,7 +6,6 @@ import TagTitle from "@/components/ui/TagTitle";
 import { TextAnimate } from "@/components/ui/text-animate";
 import Title from "@/components/ui/Title";
 
-// ─── Types ────────────────────────────────────────────────────────────────────
 
 type ProjectItem = {
   id: number;
@@ -19,7 +18,6 @@ type ProjectItem = {
   photo?: string;
 };
 
-// ─── Data ─────────────────────────────────────────────────────────────────────
 
 const projects: ProjectItem[] = [
   {
@@ -53,19 +51,22 @@ const projects: ProjectItem[] = [
   },
 ];
 
-// ─── Card ─────────────────────────────────────────────────────────────────────
 
 const ProjectCard = ({ item, index }: { item: ProjectItem; index: number }) => {
   const [imgError, setImgError] = useState(false);
+  const [tapped, setTapped] = useState(false);
 
   return (
     <motion.div
       id="projects"
-      className="group flex flex-col border border-slate-200 rounded-sm overflow-hidden bg-white hover:border-blue-300 transition-colors duration-300"
+      className={`group flex flex-col border border-slate-200 rounded-sm overflow-hidden bg-white transition-colors duration-300
+        ${tapped ? "border-blue-300" : "hover:border-blue-300"}`}
       initial={{ opacity: 0, y: 16 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-40px" }}
       transition={{ duration: 0.4, delay: index * 0.07 }}
+      onTouchStart={() => setTapped(true)}
+      onTouchEnd={() => setTimeout(() => setTapped(false), 600)}
     >
       {/* thumbnail */}
       <div className="w-full relative h-40 bg-slate-100 overflow-hidden flex-shrink-0">
@@ -75,17 +76,21 @@ const ProjectCard = ({ item, index }: { item: ProjectItem; index: number }) => {
         />
 
         {item.photo && !imgError ? (
-          <div className="absolute -bottom-5 left-0 w-[75%] h-[85%] object-cover object-top will-change-transform
-           transition-transform duration-500 ease-out rounded-md
-           group-hover:-translate-y-5 group-hover:translate-x-[17%] border-4 border-zinc-800 group-hover:scale-110">
-            <div className="w-20 h-2 bg-zinc-800 left-[35%] rounded-b-md absolute"/>
-          <img
-            src={item.photo}
-            alt={item.title}
-            loading="lazy"
-            onError={() => setImgError(true)}
-          className="w-full h-full object-cover rounded-sm"
-          />
+          <div
+            className={`absolute -bottom-5 left-0 w-[75%] h-[85%] will-change-transform
+              transition-transform duration-500 [transition-timing-function:cubic-bezier(0.34,1.2,0.64,1)]
+              rounded-md border-4 border-zinc-800
+              group-hover:-translate-y-5 group-hover:translate-x-[17%] group-hover:scale-110
+              ${tapped ? "-translate-y-5 translate-x-[17%] scale-110" : ""}`}
+          >
+            <div className="w-20 h-2 bg-zinc-800 left-[35%] rounded-b-md absolute" />
+            <img
+              src={item.photo}
+              alt={item.title}
+              loading="lazy"
+              onError={() => setImgError(true)}
+              className="w-full h-full object-cover rounded-sm"
+            />
           </div>
         ) : (
           <div className="w-full h-full flex items-center justify-center">
@@ -95,52 +100,31 @@ const ProjectCard = ({ item, index }: { item: ProjectItem; index: number }) => {
           </div>
         )}
 
-        {/* year badge */}
         <span className="absolute top-2.5 right-2.5 text-[10px] bg-blue-600 text-white px-2 py-0.5 rounded-full">
           {item.year}
         </span>
       </div>
 
-      {/* Body */}
+      {/* Body — sama persis, tidak diubah */}
       <div className="flex flex-col flex-1 p-4 gap-3">
         <h3 className="font-coolvetica text-lg leading-snug line-clamp-2">{item.title}</h3>
-
-        <p className="text-xs text-slate-500 leading-relaxed flex-1 line-clamp-3">
-          {item.description}
-        </p>
-
-        {/* Tech tags */}
+        <p className="text-xs text-slate-500 leading-relaxed flex-1 line-clamp-3">{item.description}</p>
         <div className="flex flex-wrap gap-1.5">
           {item.techs.map((tech) => (
-            <span
-              key={tech}
-              className="text-[10px] px-2 py-0.5 rounded-sm border border-blue-100 text-blue-600 bg-blue-50 font-medium"
-            >
+            <span key={tech} className="text-[10px] px-2 py-0.5 rounded-sm border border-blue-100 text-blue-600 bg-blue-50 font-medium">
               {tech}
             </span>
           ))}
         </div>
-
-        {/* Links */}
         {(item.link || item.repo) && (
           <div className="flex gap-2 pt-1 border-t border-slate-100">
             {item.link && (
-              <a
-                href={item.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[11px] text-blue-600 hover:underline"
-              >
+              <a href={item.link} target="_blank" rel="noopener noreferrer" className="text-[11px] text-blue-600 hover:underline">
                 Live demo ↗
               </a>
             )}
             {item.repo && (
-              <a
-                href={item.repo}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[11px] text-slate-400 hover:text-slate-600 hover:underline"
-              >
+              <a href={item.repo} target="_blank" rel="noopener noreferrer" className="text-[11px] text-slate-400 hover:text-slate-600 hover:underline">
                 GitHub ↗
               </a>
             )}
@@ -151,7 +135,6 @@ const ProjectCard = ({ item, index }: { item: ProjectItem; index: number }) => {
   );
 };
 
-// ─── Main ─────────────────────────────────────────────────────────────────────
 
 const Projects = () => {
   return (

@@ -5,13 +5,13 @@ type props = {
 const Profile = ({ className }: props) => {
   return (
     <div
-      className={`relative mt-10 lg:-left-14 lg:mt-0 flex justify-center items-end ${className}`}
+      className={`relative overflow-hidden lg:overflow-visible mt-10 lg:-left-14 lg:mt-0 flex justify-center items-end ${className}`}
     >
       {/* foto orang */}
       <img
         draggable={false}
         onDragStart={(e) => e.preventDefault()}
-        className="relative w-[400px] lg:w-[240px] xl:w-[200px] select-none pointer-events-none z-20"
+        className="relative w-[400px] lg:w-[240px] select-none pointer-events-none z-20"
         src="/assets/img/profile/person.webp"
       />
 
@@ -19,7 +19,7 @@ const Profile = ({ className }: props) => {
       <img
         draggable={false}
         onDragStart={(e) => e.preventDefault()}
-        className="absolute z-10 top-20 select-none pointer-events-none sm:hidden"
+        className="absolute z-10 top-0 select-none pointer-events-none sm:hidden"
         src="assets/img/gradient/gradient-profile2.webp"
       />
 
@@ -27,7 +27,7 @@ const Profile = ({ className }: props) => {
       <img
         draggable={false}
         onDragStart={(e) => e.preventDefault()}
-        className="absolute z-10 top-20 md:-top-5 opacity-70 select-none pointer-events-none object-cover hidden sm:block lg:hidden"
+        className="absolute z-10 top-30 md:top-5 select-none pointer-events-none object-cover hidden sm:block lg:hidden"
         src="assets/img/gradient/gradient-profile-large.webp"
       />
 
@@ -36,7 +36,7 @@ const Profile = ({ className }: props) => {
         draggable={false}
         onDragStart={(e) => e.preventDefault()}
         className="absolute scale-150 z-10 top-20 md:-top-5 select-none pointer-events-none object-cover lg:block hidden"
-        src="assets/img/gradient/grid-gradient.png"
+        src="assets/img/gradient/grid-gradient.webp"
       />
 
       {/* fade bawah: mobile/tablet pakai fade putih full width, desktop tidak */}
