@@ -5,7 +5,7 @@ import MobileNav from "@/components/ui/MobileNav";
 import Footer from "@/components/ui/Footer";
 import { useScrollSpy } from "@/hooks/UseScrollSpy";
 
-const SECTIONS = ["about", "experience", "projects", "contact"];
+const SECTIONS = ["about", "experience", "projects", "certificate", "contact"];
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   const active = useScrollSpy(SECTIONS);

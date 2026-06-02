@@ -4,7 +4,7 @@ const socials = [
   { icon: Github,    href: "https://github.com/notcore",         label: "GitHub",    value: "notcore" },
 //   { icon: Instagram, href: "https://instagram.com/mistakee._", label: "Instagram", value: "@dava.elyanta" },
   { icon: Phone,      href: "https://wa.me/6281215997620",           label: "whatsapp",  value: "6281215997620" },
-  { icon: Mail,      href: "mailto:davaelyanta@email.com",              label: "Email",     value: "davaelyanta@email.com" },
+  { icon: Mail,      href: "mailto:davaelyanta@gmail.com",              label: "Email",     value: "davaelyanta@email.com" },
 ];
 
 const quickNav = [
@@ -45,7 +45,7 @@ export default function Footer() {
           </div>
           <div>
             <p className="font-coolvetica text-xl leading-tight">Dava Elyanta</p>
-            <p className="text-xs text-neutral-400 mt-0.5">Fresh Graduate</p>
+            <p className="text-xs text-neutral-400 mt-0.5">WE CAN GO UP</p>
           </div>
           <div className="flex items-center gap-1 text-xs text-blue-600">
             <MapPin size={10} />

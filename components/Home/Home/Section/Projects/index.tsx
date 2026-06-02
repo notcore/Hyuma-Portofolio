@@ -34,7 +34,7 @@ const projects: ProjectItem[] = [
     id: 2,
     title: "Inker: Busines website",
     year: "2026",
-    description: "Membuat website management client dan SOP produk",
+    description: "tahap design untuk pembuatan website SOP & Client management",
     techs: ["Laravel", "TailwindCss"],
     repo: "https://github.com/notcore",
     photo: "/assets/img/projects/Inker.PNG",
@@ -58,8 +58,7 @@ const ProjectCard = ({ item, index }: { item: ProjectItem; index: number }) => {
 
   return (
     <motion.div
-      id="projects"
-      className={`group flex flex-col border border-slate-200 rounded-sm overflow-hidden bg-white transition-colors duration-300
+      className={`group flex flex-col mx-5 border border-slate-200 rounded-sm overflow-hidden bg-white transition-colors duration-300
         ${tapped ? "border-blue-300" : "hover:border-blue-300"}`}
       initial={{ opacity: 0, y: 16 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -69,7 +68,7 @@ const ProjectCard = ({ item, index }: { item: ProjectItem; index: number }) => {
       onTouchEnd={() => setTimeout(() => setTapped(false), 600)}
     >
       {/* thumbnail */}
-      <div className="w-full relative h-40 bg-slate-100 overflow-hidden flex-shrink-0">
+      <div className="w-full relative h-30 bg-slate-100 overflow-hidden flex-shrink-0">
         <img
           src="/assets/img/gradient/card-gradient-blue.webp"
           className="absolute inset-0 w-full h-full object-cover opacity-50"
@@ -77,13 +76,13 @@ const ProjectCard = ({ item, index }: { item: ProjectItem; index: number }) => {
 
         {item.photo && !imgError ? (
           <div
-            className={`absolute -bottom-5 left-0 w-[75%] h-[85%] will-change-transform
+            className={`absolute  -bottom-5 left-2 w-[75%] h-[85%] will-change-transform
               transition-transform duration-500 [transition-timing-function:cubic-bezier(0.34,1.2,0.64,1)]
               rounded-md border-4 border-zinc-800
-              group-hover:-translate-y-5 group-hover:translate-x-[17%] group-hover:scale-110
-              ${tapped ? "-translate-y-5 translate-x-[17%] scale-110" : ""}`}
+              group-hover:-translate-y-5 group-hover:translate-x-[14%] group-hover:scale-110
+              ${tapped ? "-translate-y-5 translate-x-[14%] scale-110" : ""}`}
           >
-            <div className="w-20 h-2 bg-zinc-800 left-[35%] rounded-b-md absolute" />
+            <div className="w-20 h-2 bg-zinc-800 left-[37%] md:left-[34%] rounded-b-md absolute" />
             <img
               src={item.photo}
               alt={item.title}

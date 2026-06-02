@@ -1,6 +1,6 @@
 "use client";
 
-import { User, Briefcase, Code2, Mail, MapPin, Phone, Instagram, Send } from "lucide-react";
+import { User, Briefcase, Code2, Award, Mail, MapPin, Phone, Instagram, Send } from "lucide-react";
 import { cn } from "@/lib/utils";
 import DownloadCV from "@/components/ui/Download"
 
@@ -8,7 +8,9 @@ const navItems = [
   { icon: User,      label: "About",      id: "about" },
   { icon: Briefcase, label: "Experience", id: "experience" },
   { icon: Code2,     label: "Projects",   id: "projects" },
+  { icon: Award,     label: "Certificate",id: "certificate" },
   { icon: Mail,      label: "Contact",    id: "contact" },
+
 ];
 
 const contacts = [
@@ -18,12 +20,6 @@ const contacts = [
     value: "6281215997620",
     href: "https://wa.me/6281215997620",
   },
-  {
-    icon: Mail,
-    label: "Email",
-    value: "davaelyanta@email.com",
-    href: "mailto:davaelyanta@email.com",
-  },
 ];
 
 export default function Sidebar({ active }: { active: string }) {
@@ -32,7 +28,7 @@ export default function Sidebar({ active }: { active: string }) {
   };
 
   return (
-    <aside className="w-[252px] ml-[10%] min-w-[252px] fixed top-0 left-0 h-screen bg-white border-r border-black/[0.08] flex-col hidden lg:flex">
+    <aside className="w-[252px] ml-[5%] min-w-[252px] fixed top-0 left-0 h-screen bg-white border-r border-black/[0.08] flex-col hidden lg:flex">
 
       {/* Profile */}
       <div className="px-[22px] pt-[26px] pb-[18px]">

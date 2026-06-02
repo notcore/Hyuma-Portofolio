@@ -10,6 +10,7 @@ import Experience from "@/components/Home/Home/Section/Experience";
 import Projects from "@/components/Home/Home/Section/Projects";
 import Layout from "@/components/ui/Layout";
 import Contact from "@/components/Home/Home/Section/Contact";
+import Certificates from "@/components/Home/Home/Section/certificates";
 import DownloadCV from "@/components/ui/Download";
 
 export default function CorePage() {
@@ -59,17 +60,22 @@ export default function CorePage() {
         </section>
 
         {/* Experience */}
-        <section id="experience" className="min-h-screen">
+        <section id="experience" className="min-h-auto">
           <Experience />
         </section>
 
         {/* Projects */}
-        <section id="projects" className="min-h-screen">
+        <section id="projects" className="min-h-auto">
           <Projects />
         </section>
 
+        {/* certificate */}
+        <section id="certificate" className="min-h-auto">
+          <Certificates />
+        </section>
+
         {/* Contact */}
-        <section id="contact" className="min-h-[40vh]">
+        <section id="contact" className="min-h-auto">
           <Contact />
         </section>
       </div>
