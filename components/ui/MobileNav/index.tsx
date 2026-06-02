@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { User, Briefcase, Code2, Mail, Menu, X } from "lucide-react";
+import { User, Briefcase, Code2, Award, Mail, Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "motion/react";
 import DownloadCV from "@/components/ui/Download";
@@ -10,6 +10,7 @@ const navItems = [
   { icon: User,      label: "About",      id: "about" },
   { icon: Briefcase, label: "Experience", id: "experience" },
   { icon: Code2,     label: "Projects",   id: "projects" },
+  { icon: Award,     label: "Certificate",   id: "certificate" },
   { icon: Mail,      label: "Contact",    id: "contact" },
 ];
 
