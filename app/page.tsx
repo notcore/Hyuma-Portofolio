@@ -18,7 +18,7 @@ export default function CorePage() {
 
   return (
     <Layout>
-      <div className="flex flex-col gap-24 px-6 md:px-12 xl:px-20 py-16">
+      <div className="flex flex-col gap-24 px-6 md:px-12 xl:px-15 py-16">
         <section
           id="about"
           className="flex flex-col md:flex-row md:items-end md:gap-12"

@@ -16,7 +16,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       <MobileNav active={active} />
 
       <div>
-        <main className="flex-1 lg:ml-[30%] pb-20 lg:pb-0">
+        <main className="flex-1 lg:ml-[27%] pb-20 lg:pb-0">
           {children}
           <Footer />
         </main>

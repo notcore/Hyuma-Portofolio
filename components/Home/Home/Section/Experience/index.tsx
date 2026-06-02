@@ -108,7 +108,7 @@ const TimelineItem = ({
     <motion.div
       id="experience"
       ref={itemRef}
-      className="flex gap-6 md:gap-10 items-start"
+      className="flex md:max-w-[80%] xl:max-w-[70%] gap-6 md:gap-10 items-start"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       exit={{ opacity: 0 }}
