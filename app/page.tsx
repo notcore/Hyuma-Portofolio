@@ -30,7 +30,7 @@ export default function CorePage() {
               <div className="flex flex-wrap mt-4 gap-2">
                 <Label
                   detailSkill="web developer"
-                  detailDeskripsi="PHP, Javascript"
+                  detailDeskripsi="React, Tailwind, Laravel"
                   title="Developer"
                   color="blue-600"
                   colorText="white"
@@ -42,8 +42,8 @@ export default function CorePage() {
                   color="green-600"
                   colorText="white"
                 />
-                <Label
-                  detailSkill="admin data"
+                 <Label
+                  detailSkill="Basic Micorosft Office"
                   detailDeskripsi="Excel, word"
                   title="Office"
                   color="green-600"

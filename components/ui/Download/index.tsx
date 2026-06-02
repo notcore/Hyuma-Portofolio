@@ -4,7 +4,7 @@ const DownloadCV = () => {
   return (
    <div className=" my-3 border-black/[0.07]">
         <a
-          href="/download/CV - Dava Elyanta.pdf"
+          href="/download/CV_DAVA ELYANTA.pdf"
           download
           className="relative group/cv inline-flex items-center gap-2 w-full border border-blue-200 bg-white hover:bg-blue-600 px-3 py-2 rounded-sm transition-colors"
         >

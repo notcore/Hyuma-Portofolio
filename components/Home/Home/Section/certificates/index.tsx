@@ -68,7 +68,11 @@ const CertCard = ({ item, index, onClick }: { item: CertItem; index: number; onC
     {/* Body */}
     <div className="p-3 flex flex-col gap-1">
       <p className="text-sm font-medium text-slate-800 leading-snug line-clamp-2">{item.title}</p>
-      <p className="text-xs text-slate-400">{item.issuer}</p>
+      <div className="flex gap-1 items-center">
+        <p className="text-xs text-slate-400">{item.issuer}</p>
+        <img src="assets/svg/verified.svg" className="mt-2"/>
+      </div>
+      
     </div>
   </motion.div>
 );
@@ -127,7 +131,10 @@ const Certificates = () => {
             rel="noopener noreferrer"
             className="flex items-center justify-between px-4 py-3 bg-white hover:bg-slate-50 transition-colors"
           >
-            <span className="text-xs text-slate-600">{selected.issuer}</span>
+            <div className="flex gap-1 items-center">
+              <p className="text-xs text-slate-400">{selected.issuer}</p>
+              <img src="assets/svg/verified.svg" className="mt-2"/>
+            </div>
             <span className="text-xs text-blue-600">Buka ↗</span>
           </a>
         )}
