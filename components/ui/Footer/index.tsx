@@ -4,7 +4,7 @@ const socials = [
   { icon: Github,    href: "https://github.com/notcore",         label: "GitHub",    value: "notcore" },
 //   { icon: Instagram, href: "https://instagram.com/mistakee._", label: "Instagram", value: "@dava.elyanta" },
   { icon: Phone,      href: "https://wa.me/6281215997620",           label: "whatsapp",  value: "6281215997620" },
-  { icon: Mail,      href: "mailto:davaelyanta@gmail.com",              label: "Email",     value: "davaelyanta@email.com" },
+  { icon: Mail,      href: "mailto:davaelyanta@gmail.com",              label: "Email",     value: "davaelyanta@gmail.com" },
 ];
 
 const quickNav = [
