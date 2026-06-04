@@ -28,7 +28,7 @@ const certificates: CertItem[] = [
   {
     id: 2,
     title: "computer hardware basic",
-    issuer: "Cisco Network Academy",
+    issuer: "Cisco Academy",
     year: "2026",
     tags: ["Hardware"],
     photo: "/assets/img/certificates/computer-hardware-basic.webp",

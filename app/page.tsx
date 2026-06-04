@@ -3,14 +3,14 @@
 import { useState } from "react";
 import BlurOverlay from "@/components/ui/BlurOverlay";
 import TagTitle from "@/components/ui/TagTitle";
-import AboutMe from "@/components/Home/Home/Section/Introduce";
+import AboutMe from "@/components/pages/Home/Section/Introduce";
 import Label from "@/components/ui/Label";
-import Profile from "@/components/Home/Home/Section/Profile";
-import Experience from "@/components/Home/Home/Section/Experience";
-import Projects from "@/components/Home/Home/Section/Projects";
+import Profile from "@/components/pages/Home/Section/Profile";
+import Experience from "@/components/pages/Home/Section/Experience";
+import Projects from "@/components/pages/Home/Section/Projects";
 import Layout from "@/components/ui/Layout";
-import Contact from "@/components/Home/Home/Section/Contact";
-import Certificates from "@/components/Home/Home/Section/certificates";
+import Contact from "@/components/pages/Home/Section/Contact";
+import Certificates from "@/components/pages/Home/Section/certificates";
 import DownloadCV from "@/components/ui/Download";
 
 export default function CorePage() {
