@@ -68,7 +68,7 @@ export const projectsData: Record<Mode, ProjectItem[]> = {
       description: "Tahap design untuk pembuatan website SOP & Client management.",
       techs: ["Laravel", "TailwindCSS"],
       repo: "https://github.com/notcore",
-      photo: "/assets/img/projects/Inker.webp",
+      photo: "/assets/img/projects/inker.webp",
     },
     {
       id: 3,
@@ -79,7 +79,7 @@ export const projectsData: Record<Mode, ProjectItem[]> = {
       techs: ["NextJs", "TypeScript", "TailwindCSS"],
       link: "https://hyuma-portofolio.vercel.app",
       repo: "https://github.com/notcore",
-      photo: "/assets/img/projects/Portofolio.webp",
+      photo: "/assets/img/projects/portofolio.webp",
     },
   ],
 
