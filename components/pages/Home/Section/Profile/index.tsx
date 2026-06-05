@@ -16,6 +16,7 @@ const Profile = ({ className }: props) => {
           onDragStart={(e) => e.preventDefault()}
           className="absolute z-10 top-0 w-full select-none pointer-events-none sm:hidden"
           src="assets/img/gradient/gradient-profile2.webp"
+          loading="eager"
         />
 
         <img
@@ -23,6 +24,7 @@ const Profile = ({ className }: props) => {
           onDragStart={(e) => e.preventDefault()}
           className="absolute z-10 top-10 sm:top-5 w-full select-none pointer-events-none object-cover hidden sm:block md:hidden"
           src="assets/img/gradient/gradient-profile-large.webp"
+          loading="eager"
         />
 
         <img
@@ -30,6 +32,7 @@ const Profile = ({ className }: props) => {
           onDragStart={(e) => e.preventDefault()}
           className="absolute md:scale-145 z-10 -top-3 select-none pointer-events-none object-cover hidden md:block"
           src="assets/img/gradient/grid-gradient.webp"
+          loading="eager"
         />
 
         <img
@@ -37,6 +40,7 @@ const Profile = ({ className }: props) => {
           onDragStart={(e) => e.preventDefault()}
           className="relative w-[400px] md:w-[250px] lg:w-[270px] select-none pointer-events-none z-20"
           src="/assets/img/profile/person.webp"
+          loading="eager"
         />
 
         <div
