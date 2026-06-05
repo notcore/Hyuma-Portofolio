@@ -11,7 +11,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   const active = useScrollSpy(SECTIONS);
 
   return (
-    <div className="flex min-h-screen bg-white">
+    <div className="flex min-h-screen max-w-screen overflow-x-hidden bg-white">
       <Sidebar active={active} />
       <MobileNav active={active} />
 

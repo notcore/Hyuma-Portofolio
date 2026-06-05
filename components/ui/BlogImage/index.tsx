@@ -11,6 +11,7 @@ const BlogImage = ( {alt, src, className} : props ) => {
             className={`w-full h-auto rounded-sm ${className}`} 
             src={`/assets/img/blog/${src}`} 
             alt={ alt ? ( 'dokumentasi' ) : ( alt ) }
+            loading="lazy"
           />
         </div>
     )

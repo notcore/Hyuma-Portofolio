@@ -1,8 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 
-export default function BlurOverlay() {
+export default function LoadingSpinner() {
   const [show, setShow] = useState(true);
 
   useEffect(() => {
@@ -10,17 +9,11 @@ export default function BlurOverlay() {
     return () => clearTimeout(timer);
   }, []);
 
+  if (!show) return null;
+
   return (
-    <AnimatePresence>
-      {show && (
-        <motion.div
-          initial={{ opacity: 1, backdropFilter: "blur(8px) brightness(1.3)" }}
-          animate={{ opacity: 0, backdropFilter: "blur(0px) brightness(1)" }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="fixed inset-0 bg-white/10 z-30"
-        />
-      )}
-    </AnimatePresence>
+    <div className="fixed inset-0 z-30 flex items-center justify-center bg-white/50">
+      <div className="h-10 w-10 border-4 border-gray-300 border-t-black rounded-full animate-spin" />
+    </div>
   );
 }

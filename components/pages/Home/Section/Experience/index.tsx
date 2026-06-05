@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "motion/react";
 import TagTitle from "@/components/ui/TagTitle";
 import { TextAnimate } from "@/components/ui/text-animate";
 import Title from "@/components/ui/Title";
+import Paragraph from "@/components/ui/typografi/Paragraph";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -161,10 +162,13 @@ const TimelineItem = ({
               key={i}
               className="flex gap-2.5 text-sm "
             >
-              <span className="text-blue-600 font-semibold flex-shrink-0 tabular-nums">
+              <Paragraph className="flex gap-2.5 text-sm">
+                <span className="text-blue-600 font-semibold flex-shrink-0 tabular-nums">
                 {String(i + 1).padStart(2,)}.
               </span>
-              {point}
+                {point}
+              </Paragraph>
+              
             </li>
           ))}
         </ul>

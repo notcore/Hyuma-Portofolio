@@ -25,7 +25,7 @@ export default function MobileNav({ active }: { active: string }) {
   };
 
   return (
-    <div className="lg:hidden">
+    <div className="lg:hidden max-w-screen">
       {/* Topbar */}
       <header className="fixed top-0 left-0 right-0 z-50 h-14 bg-white/80 backdrop-blur-md border-b border-black/[0.07] flex items-center justify-between px-5">
         <p className="font-coolvetica text-lg">Dava Elyanta</p>

@@ -58,8 +58,6 @@ export default async function ProjectBlogPage({
 
   const { blog } = project;
 
-  // Dynamic import konten dari components/pages/Blog/{slug}.tsx
-  // Kalau file belum ada → render placeholder, tidak crash
   let BlogContent: React.ComponentType | null = null;
   try {
     const mod = await import(`@/components/pages/Blog/${slug}`);
@@ -72,7 +70,7 @@ export default async function ProjectBlogPage({
     <Layout>
       <main className="max-w-2xl mx-auto px-4 py-12 md:py-10 lg:ml-[5%]">
 
-        <TagTitle title="Blog" bagian={project.title} color="blue" />
+        <TagTitle title="Dokumentasi" bagian={project.title} color="blue" />
 
         {/* back */}
         <Link
