@@ -59,7 +59,6 @@ const alatDanBahan = [
   },
 ];
 
-// 1. Definisiin interface dulu
 interface AlatBahan {
   no: number;
   name: string;

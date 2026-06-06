@@ -24,7 +24,7 @@ const steps = [
     src: "jaringanlan/21.webp",
     alt: "ping dari client ke server",
     caption: "Ping dari client ke server",
-    command: "ping 192.168.12.2",
+    command: "ping 192.168.11.2",
   },
   {
     src: "jaringanlan/22.webp",

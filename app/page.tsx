@@ -43,8 +43,8 @@ export default function CorePage() {
                   colorText="white"
                 />
                  <Label
-                  detailSkill="Basic Micorosft Office"
-                  detailDeskripsi="Excel, word"
+                  detailSkill="Basic Office"
+                  detailDeskripsi="GoogleSheets"
                   title="Office"
                   color="green-600"
                   colorText="white"
