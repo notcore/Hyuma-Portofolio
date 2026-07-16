@@ -96,6 +96,18 @@ export const projectsData: Record<Mode, ProjectItem[]> = {
       ipRange: "192.168.1.0/24",
       blog: { readTime: "7 min read", publishedAt: "April 2025" },
     },
+    {
+      id: 2,
+      slug: "Membuat-virtual-lab",
+      title: "Membuat virtual lab",
+      year: "2026",
+      description: "Dokumentasi ini berisi proses pembuatan virtual lab di Virtual Machine menggunakan winbox, RoutesOS, dan Alpine OS.",
+      techs: ["Winbox","Mikrotik","VirtualMachine"],
+      photo: "/assets/img/projects/virtual.webp",
+      status: "online",
+      ipRange: "192.168.1.0/24",
+      // blog: { readTime: "7 min read", publishedAt: "Maret 2026" },
+    },
   ],
 
   // server: [
