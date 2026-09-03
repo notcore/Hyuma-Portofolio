@@ -69,7 +69,7 @@ export default async function ProjectBlogPage({
   return (
     <Layout>
       <main className="max-w-2xl mx-auto px-4 py-12 md:py-10 lg:ml-[5%]">
-
+        
         <TagTitle title="Dokumentasi" bagian={project.title} color="blue" />
 
         {/* back */}

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import MaintenancePage from "@/components/pages/Home/Section/MaintenancePage";
 
 export const metadata: Metadata = {
   title: "Dava Elyanta | Hyuma Dev",
@@ -16,7 +17,8 @@ export default function RootLayout({
       <body
         className={`antialiased`}
       >
-        {children}
+        <MaintenancePage />
+        {/* {children} */}
       </body>
     </html>
   );
